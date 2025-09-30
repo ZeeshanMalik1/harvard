@@ -1,0 +1,43 @@
+   :root{
+      --accent:#800000; /* Maroon */
+      --bg:#ffffff; /* White */
+      --card:#f8f8f8; /* Light grey card */
+      --muted:#555;
+      --glow:#800000;
+    }
+    html,body{
+      height:100%;margin:0;
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#222;
+      overflow-x:hidden;
+    }
+    .wrap{max-width:980px;margin:36px auto;padding:28px;animation:fadeIn 1.2s ease-in}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px;animation:slideDown 1s ease}
+    .brand{display:flex;flex-direction:column}
+    .brand h1{margin:0;font-size:26px;color:var(--accent);text-shadow:0 0 6px rgba(128,0,0,0.3)}
+    .brand p{margin:0;color:var(--muted);font-size:14px}
+    .card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 0 10px rgba(128,0,0,0.15);animation:scaleIn 0.8s ease}
+    h2{color:var(--accent);margin-top:18px;text-shadow:0 0 4px rgba(128,0,0,0.3)}
+    p,li{line-height:1.7;color:#333}
+    ul{padding-left:1.25rem}
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:13px}
+    .actions{margin-top:18px;display:flex;gap:10px}
+    a.button{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;transition:all 0.3s ease}
+    a.primary{background:var(--accent);color:#fff;box-shadow:0 0 6px rgba(128,0,0,0.5)}
+    a.primary:hover{transform:translateY(-2px) scale(1.05);box-shadow:0 0 12px rgba(128,0,0,0.6)}
+    a.ghost{border:1px solid var(--accent);color:var(--accent);background:transparent}
+    a.ghost:hover{background:rgba(128,0,0,0.05);box-shadow:0 0 8px rgba(128,0,0,0.3)}
+    footer{margin-top:22px;font-size:13px;color:var(--muted)}
+    @media (max-width:640px){.wrap{margin:18px;padding:16px}}
+    .toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;animation:fadeIn 2s ease}
+    .toc a{font-size:13px;color:var(--accent);text-decoration:none;transition:color 0.3s ease}
+    .toc a:hover{color:#000;text-shadow:0 0 6px rgba(128,0,0,0.3)}
+    .section{margin-top:14px;animation:fadeUp 1s ease}
+    .small{font-size:13px;color:var(--muted)}
+    .contact{background:#fff;border:1px solid var(--accent);padding:14px;border-radius:10px;box-shadow:0 0 6px rgba(128,0,0,0.2)}
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes slideDown{from{opacity:0;transform:translateY(-30px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes scaleIn{from{opacity:0;transform:scale(0.95)}to{opacity:1;transform:scale(1)}}

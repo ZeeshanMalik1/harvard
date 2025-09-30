@@ -1,0 +1,28 @@
+.fixedSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  position: fixed;
+  bottom: 20px;   /* safer than top: 90vh */
+  right: 20px;
+  z-index: 999;
+}
+.fixedSection img{
+    width: 60px;
+}
+.top {
+  color: aliceblue;
+  background: #980000;
+  border: none;
+  border-radius: 12px;
+  padding:3px 8px;
+  /* width: 20px; */
+  cursor: pointer;
+  font-size: 22px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.top i {
+  font-size: 28px;
+}

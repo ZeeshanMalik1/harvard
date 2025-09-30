@@ -1,0 +1,8 @@
+.admin{
+    height: 100vh;
+    overflow: hidden;
+}
+.adminPages{
+    height: 100vh;
+    overflow-y: auto !important;
+}

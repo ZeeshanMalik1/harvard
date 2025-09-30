@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.mission-section {
+  background-color: #9d0e14; /* dark red background */
+  color: #fff;
+  padding: 50px 80px;
+  display: flex;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+  font-family: "Mulish";
+}
+
+.mission-content {
+  max-width: 900px;
+  /* padding: 70px; */
+}
+
+.mission-label {
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.mission-line {
+  width:2000px;
+  height: 1px;
+  background-color: #fff;
+  position: relative;  
+  top: 80px;
+  right: 30px;
+}
+
+.mission-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.mission-title span {
+  font-family: "Mulish";
+  color: #fff;
+  font-weight: 700;
+}
+
+.mission-subtext {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.mission-description {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #f1f1f1;
+}

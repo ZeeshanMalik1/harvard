@@ -1,0 +1,20 @@
+.sidebar {
+  width: 200px;
+  background-color: #1e293b;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar button {
+  background: none;
+  border: none;
+  color: white;
+  padding: 10px 0;
+  text-align: left;
+  cursor: pointer;
+}
+.sidebar button:hover {
+  background-color: #334155;
+}
