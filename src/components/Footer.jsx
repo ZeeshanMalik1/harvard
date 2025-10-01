@@ -31,7 +31,7 @@ function Footer() {
       <h6 class="footer-heading">{constants.footerSection.heading2}</h6>
       <ul class="footer-hours">
         <li><img src={constants.icons.clockIcon} alt="clock" />{constants.schoolTiming}</li>
-        <li ><Link to="/privacy" style={{textDecoration: "none", color:"white"}}>Privacy Policy</Link></li>
+        <li ><Link to="/privacy" style={{textDecoration: "none", color:"white"}} onClick={()=>{window.scrollTo(0,0)}}>Privacy Policy</Link></li>
       </ul>
     </div>
     <div className="socialIcons">

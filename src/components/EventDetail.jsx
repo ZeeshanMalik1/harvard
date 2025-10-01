@@ -171,7 +171,7 @@ const EventDetail = () => {
             <div className="social-media" style={{ marginTop: '20px', textAlign: 'center' }}>
                 <h3>Follow Us on Social Media</h3>
                 <div style={{ display: 'flex',  justifyContent: 'center', gap: '15px', flexWrap: 'wrap' ,textAlign:"center"}}>
-                    <a href="#" style={{ textDecoration: 'none', color: '#25D366', fontSize: '1.5em' }}><img src="/images/SocialIcons/whatsapp (2).png" alt="WhatsApp" style={{ width: '1.5em', height: '1.5em' }} /> <br />WhatsApp</a>
+                    <a href="#" style={{ textDecoration: 'none', color: '#25D366', fontSize: '1.5em' }}><img src="/images/wa.png" alt="WhatsApp" style={{ width: '1.5em', height: '1.5em' }} /> <br />WhatsApp</a>
                     <a href="#" style={{ textDecoration: 'none', color: '#000000ff', fontSize: '1.5em' }}><img src="/images/SocialIcons/twitter.png" alt="Twitter" style={{ width: '1.5em', height: '1.5em' }} /> <br />Twitter</a>
                     <a href="#" style={{ textDecoration: 'none', color: '#E4405F', fontSize: '1.5em' }}><img src="/images/SocialIcons/instagram.png" alt="Instagram" style={{ width: '1.5em', height: '1.5em' }} /> <br />Instagram</a>
                     <a href="#" style={{ textDecoration: 'none', color: '#BD081C', fontSize: '1.5em' }}><img src="/images/SocialIcons/pinterest.png" alt="Pinterest" style={{ width: '1.5em', height: '1.5em' }} /> <br />Pinterest</a>

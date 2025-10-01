@@ -2,7 +2,7 @@ import React from 'react'
 import "../Styles/privacy.css"
 function Privacy() {
   return (
-    <div>
+    <div className="privacyMain">
          <div class="wrap">
     <header>
       <div class="brand">

@@ -59,7 +59,7 @@ const LatestNews = () => {
             </div>
 
             <div className="news-cards">
-                {loading && <p>Loading latest news...</p>}
+                {loading && <p>Loading latest Events...</p>}
                 {error && <p style={{ color: 'red' }}>{error}</p>}
                 
                 {/* Check if events are loaded and map the first 4 */}
@@ -81,23 +81,20 @@ const LatestNews = () => {
                     </Link>
                 ))}
             </div>
-
-            {/* News Slider (Remains Static) */}
-            <div className="news-slider">
-                <div className="slider-track">
-                    {latestNewsSliderImages
-                        .concat(latestNewsSliderImages)
-                        .map((img, index) => (
-                            <img
-                                key={index}
-                                src={img}
-                                alt={`Slide ${index + 1}`}
-                                className="slider-img"
-                            />
-                        ))}
-                </div>
-            </div>
-        </section>
+{/* News Slider */}
+<div className="news-slider">
+  <div className="slider-track">
+    {latestNewsSliderImages.concat(latestNewsSliderImages).map((img, index) => (
+      <img
+        key={img} // better than index
+        src={img}
+        alt={`Slide ${index + 1}`}
+        className="slider-img"
+      />
+    ))}
+  </div>
+</div>
+ </section>
     );
 };
 

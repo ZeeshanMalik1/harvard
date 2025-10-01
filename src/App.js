@@ -52,7 +52,12 @@ function App() {
                 <Route path="/gallery" element={<PublicLayout><Gallery /></PublicLayout>} />
                 <Route path="/contactus" element={<PublicLayout><Contactus /></PublicLayout>} />
                 <Route path="/latest-news" element={<PublicLayout><LatestNews /></PublicLayout>} />
-                <Route path="/privacy" element={<PublicLayout><Privacy /></PublicLayout>} />
+                <Route path="/privacy" element={
+                    <>
+                        <Header />
+                        <Privacy />
+                    </>
+                } />
 
                 {/* 👇 CORRECTED: Use the EventDetail component directly */}
                 <Route path="/events/:eventId" element={<PublicLayout><EventDetail /></PublicLayout>} />

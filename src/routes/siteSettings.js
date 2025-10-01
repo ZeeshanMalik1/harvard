@@ -57,19 +57,22 @@ router.put("/", protect, upload.any(), async (req, res) => {
 
     const numSlides = parseInt(req.body.numSlides) || 3;
     const updatedSlides = [];
+for (let i = 0; i < numSlides; i++) {
+  const title = req.body[`sliderImages[${i}][title]`] || "";
+  const description = req.body[`sliderImages[${i}][description]`] || "";
+  const link = req.body[`sliderImages[${i}][link]`] || "";
 
-    for (let i = 0; i < numSlides; i++) {
-      const title = req.body[`sliderImages[${i}][title]`] || "";
-      const description = req.body[`sliderImages[${i}][description]`] || "";
-      const link = req.body[`sliderImages[${i}][link]`] || "";
+  let imagePath = req.body[`sliderImages[${i}][image]`] || "";
 
-      let imagePath = req.body[`sliderImages[${i}][image]`] || "";
-      if (req.files && req.files[i]) {
-        imagePath = `/uploads/${req.files[i].filename}`;
-      }
+  // Look for uploaded file with fieldname `sliderImages[i][imageFile]`
+  const file = req.files.find(f => f.fieldname === `sliderImages[${i}][imageFile]`);
+  if (file) {
+    imagePath = `/uploads/${file.filename}`;
+  }
 
-      updatedSlides.push({ image: imagePath, title, description, link });
-    }
+  updatedSlides.push({ image: imagePath, title, description, link });
+}
+
 
     settings.sliderImages = updatedSlides;
     const updatedSettings = await settings.save();

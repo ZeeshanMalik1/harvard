@@ -42,8 +42,8 @@ export default function SiteSettingsPage() {
         formData.append(`sliderImages[${i}][link]`, slide.link);
         formData.append(`sliderImages[${i}][image]`, slide.image);
         if (files[i]) {
-          formData.append("images", files[i]);
-        }
+  formData.append(`sliderImages[${i}][imageFile]`, files[i]); 
+}
       });
       const response = await fetch("/api/site-settings/", {
         method: "PUT",

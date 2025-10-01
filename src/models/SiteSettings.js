@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// Sub-schema for each slider
 const sliderSchema = new mongoose.Schema({
   image: { type: String, default: "" },
   title: { type: String, default: "" },
