@@ -3,3 +3,8 @@
     font-family: "Mulish";
     height: min-content;
 }
+
+html,body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}

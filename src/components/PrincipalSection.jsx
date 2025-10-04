@@ -90,7 +90,7 @@ const PrincipalMessage = () => {
     <div className="principal-number-label">{constants.introSection.fnTitle1}</div>
   </div>
   <div className="principal-number-box">
-    <div className="principal-number-value" data-target={constants.introSection.fn2TargetValue}>0<span className="plus-sign">+</span></div>
+    <div className="principal-number-value"  data-target={constants.introSection.fn2TargetValue}>0<span className="plus-sign">+</span></div>
     <div className="principal-number-label">{constants.introSection.fnTitle2}</div>
   </div>
   <div className="principal-number-box">

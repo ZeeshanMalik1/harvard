@@ -16,6 +16,7 @@ import EventDetail from "./components/EventDetail";
 
 // Layout
 import Header from "./components/Header";
+import FixedSection from "./components/FixedSection";
 import Footer from "./components/Footer";
 
 // Admin pages
@@ -37,6 +38,7 @@ const PublicLayout = ({ children }) => (
     <>
         <Header />
         {children}
+        <FixedSection />
         <Footer />
     </>
 );

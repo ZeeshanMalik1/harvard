@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Difference from "../components/Difference";
 import Facilities from "../components/Facilities";
 import MissionSection from "../components/MissionSection";
@@ -9,13 +9,16 @@ import LatestNews from "../components/LatestNews";
 import FixedSection from "../components/FixedSection";
 
 function Home() {
+  useEffect(() => {
+    document.title = "Home - The Harvard School";
+  }, []);
   return (
     <>
       <Slider />
       <VisionSection />
       <MissionSection />
       <Difference />
-      <Facilities />
+      {/* <Facilities /> */}
       <FixedSection/>
       <PrincipalMessage />
       <LatestNews />

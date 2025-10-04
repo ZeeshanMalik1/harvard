@@ -1,6 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../Styles/privacy.css"
+
 function Privacy() {
+  useEffect(() => {
+    document.title = "Privacy Policy - The Harvard School";
+  }, []);
+
   return (
     <div className="privacyMain">
          <div class="wrap">

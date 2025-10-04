@@ -1,14 +1,14 @@
 .about-hero {
   position: relative;
-  height: 60vh; 
-  min-height: 320px; 
-  /* background: url("../../public/images/vision2.jpg") center/cover no-repeat; */
+  height: 65vh;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-family: "Mulish", sans-serif;
   overflow: hidden;
+  animation: zoomIn 1.2s ease forwards;
 }
 
 .about-hero .overlay {
@@ -20,7 +20,7 @@
   background: rgba(157, 14, 20, 0.7);
   z-index: 1;
   opacity: 0;
-  animation: fadeIn 1s ease forwards;
+  animation: fadeIn 1.2s ease forwards;
 }
 
 .about-hero .content {
@@ -29,61 +29,85 @@
   max-width: 900px;
   padding: 0 20px;
   opacity: 0;
-  transform: translateY(40px);
-  animation: slideUp 1.2s ease forwards;
-  animation-delay: 0.3s;
+  transform: translateY(50px);
+  animation: slideUp 1.3s ease forwards;
+  animation-delay: 0.4s;
 }
 
 .about-hero h1 {
-  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-size: clamp(2rem, 6vw, 3.8rem);
   color: #fff;
-  font-weight: 700;
+  font-weight: 800;
   line-height: 1.2;
+  letter-spacing: 1px;
+  animation: fadeText 1.5s ease-in-out forwards;
+  animation-delay: 0.6s;
 }
-.about-hero p{
-  font-size: medium;
-  line-height: 0.9;
+
+.about-hero p {
+  font-size: clamp(0.9rem, 2vw, 1.2rem);
+  line-height: 1.4;
   font-weight: 500;
   color: aliceblue;
-  /* width: 350px; */
-  margin-top: 30px;
-  align-self: center;
-  
+  margin-top: 25px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeSlide 1.5s ease forwards;
+  animation-delay: 0.8s;
 }
+
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  to { opacity: 1; }
 }
 
 @keyframes slideUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeText {
+  from { opacity: 0; letter-spacing: 6px; }
+  to { opacity: 1; letter-spacing: 1px; }
+}
+
+@keyframes fadeSlide {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(1.1); }
+  to { transform: scale(1); }
 }
 
 @media (max-width: 992px) {
   .about-hero {
-    height: 50vh;
+    height: 55vh;
+  }
+  .about-hero .content {
+    max-width: 700px;
   }
 }
 
 @media (max-width: 768px) {
   .about-hero {
-    height: 40vh;
-    background-position: top;
+    height: 45vh;
   }
   .about-hero h1 {
-    font-size: clamp(1.6rem, 5vw, 2.5rem);
+    font-size: clamp(1.6rem, 5vw, 2.6rem);
+  }
+  .about-hero p {
+    font-size: 0.95rem;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 480px) {
   .about-hero {
-    height: 35vh;
+    height: 38vh;
   }
   .about-hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
+  }
+  .about-hero p {
+    font-size: 0.85rem;
   }
 }

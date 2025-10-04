@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../Styles/LatestNews.css";
-import { latestNews, latestNewsSliderImages } from "../constants/images"; 
+import { latestNews, latestNewsSliderImages } from "../constants/images";
 // Static events data import is correctly REMOVED
 import { Link } from "react-router-dom";
 import constants from "../constants/constant";
@@ -10,6 +10,9 @@ import constants from "../constants/constant";
 const API_URL = "http://localhost:4000/api/events";
 
 const LatestNews = () => {
+  useEffect(() => {
+    document.title = "Latest News - The Harvard School";
+  }, []);
     // State to hold the fetched events
     const [fetchedEvents, setFetchedEvents] = useState([]);
     const [loading, setLoading] = useState(true);

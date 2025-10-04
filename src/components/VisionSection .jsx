@@ -13,7 +13,7 @@ const VisionSection = () => {
           <img
             src={visionImages.first}
             alt="Vision"
-            id="heading-image"
+            id="heading-image first-image"
             className="vision-img"
           />
         </div>

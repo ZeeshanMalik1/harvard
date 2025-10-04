@@ -12,15 +12,12 @@
   gap: clamp(20px, 4vw, 40px);
   max-width: 1200px;
   min-height: 550px;
-  /* padding: clamp(20px, 4vw, 40px); */
-  padding: 40px 50px;
-    background: 
-    linear-gradient(rgba(157, 14, 20, 0.9), rgba(157, 14, 20, 0.9)), 
-    url('../../public/images/bg.jpg');
+  padding: clamp(20px, 4vw, 50px);
+  background: linear-gradient(rgba(157, 14, 20, 0.9), rgba(157, 14, 20, 0.9)), url('../../public/images/bg.jpg');
   margin: auto;
   align-items: start;
-  /* border-radius: 12px; */
   animation: fadeIn 1.2s ease;
+  border-radius: 12px;
 }
 
 .facilities-left {
@@ -76,11 +73,16 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.facilities-list li:hover {
+  transform: translateX(5px);
+  color: #f5c7c7;
 }
 
 .facilities-list img {
   width: clamp(10px, 3vw, 16px);
-  color: #9d0e14;
 }
 
 .facilities-right {
@@ -119,12 +121,12 @@
   padding: clamp(15px, 4vw, 30px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
   text-align: center;
-  /* border-radius: 12px; */
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .facilities-box:hover {
-  transform: translateY(-8px) scale(1.03);
+  transform: translateY(-10px) scale(1.05);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 #facilities-box1,
@@ -139,6 +141,7 @@
   font-weight: 900;
   position: relative;
   left: clamp(5px, 3vw, 20px);
+  animation: fadeInDown 1s ease;
 }
 
 .text-box2 {
@@ -147,6 +150,7 @@
   font-weight: 900;
   position: relative;
   right: clamp(5px, 6vw, 50px);
+  animation: fadeInUp 1s ease;
 }
 
 .text-img1 {
@@ -155,7 +159,7 @@
   bottom: clamp(60px, 15vw, 110px);
   right: clamp(80px, 20vw, 210px);
   opacity: 0.5;
-  animation: fadeIn 2s ease infinite alternate;
+  animation: fadePulse 3s ease infinite alternate;
 }
 
 .text-img2 {
@@ -164,7 +168,7 @@
   right: clamp(60px, 15vw, 170px);
   bottom: clamp(80px, 18vw, 140px);
   opacity: 0.5;
-  animation: fadeIn 2s ease infinite alternate;
+  animation: fadePulse 3s ease infinite alternate;
 }
 
 @media (max-width: 1024px) {
@@ -203,8 +207,30 @@
   }
   .facilities-box,
   .circle-images {
-    width: 220px;
-    height: 220px;
+    width: 150px;
+    height: 150px;
+  }
+  
+  .facilities-title {
+    font-size: clamp(1.4rem, 6vw, 2rem);
+  }
+  .facilities-text {
+    font-size: clamp(0.8rem, 4vw, 0.9rem);
+  }
+  .text-box1,
+   h2 {
+    font-size: clamp(0.7rem, 3.5vw, 1em);
+    position: relative;
+    left: 10px;
+    top:10px;
+    margin: auto;
+  }
+  .text-box2 {
+    font-size: clamp(0.7rem, 3.2vw, 1em);
+    position: relative;
+    right: 25px;
+    bottom:10px;
+    margin: auto;
   }
 }
 
@@ -236,4 +262,10 @@
 @keyframes fadeIn {
   from { opacity: 0.5; transform: scale(0.95); }
   to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadePulse {
+  0% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+  100% { opacity: 0.3; transform: scale(0.9); }
 }

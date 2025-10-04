@@ -16,7 +16,7 @@ function Footer() {
       <div class="footer-socials">
       </div>
     </div>
-
+    <div className="middleContainer">
     <div class="footer-middle">
     <h6 class="footer-heading">{constants.footerSection.heading1}</h6>
       <ul class="footer-links">
@@ -33,6 +33,7 @@ function Footer() {
         <li><img src={constants.icons.clockIcon} alt="clock" />{constants.schoolTiming}</li>
         <li ><Link to="/privacy" style={{textDecoration: "none", color:"white"}} onClick={()=>{window.scrollTo(0,0)}}>Privacy Policy</Link></li>
       </ul>
+    </div>
     </div>
     <div className="socialIcons">
        <a href={constants.facebookLink} target='_blank' rel="noreferrer">

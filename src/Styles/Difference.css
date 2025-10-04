@@ -35,6 +35,8 @@
 
 .progress-bars {
   margin: 20px 0;
+  width: 90%;
+  /* margin: auto; */
 }
 
 .progress-item {
@@ -167,6 +169,16 @@
     left: 0;
     bottom: 0;
     display: none;
+  }
+  .difference-left, .difference-right {
+    min-width: 100%;
+  }
+  .progress-value {
+    bottom: 22px;
+  }
+  .progress-bars {
+    width: 99%;
+    margin: auto;
   }
 }
 

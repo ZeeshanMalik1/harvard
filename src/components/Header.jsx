@@ -16,13 +16,13 @@ function Header() {
       <div className="upper-header">
         <div className="upper-header-left">
           <span>
-            <i className="ri-phone-fill"></i> {constants.phone}
+            <i className="ri-phone-fill" style={{filter:"invert(1)"}}></i> {constants.phone}
           </span>
           <span>
-            <i className="ri-mail-fill"></i> {constants.email}
+            <i className="ri-mail-fill" style={{filter:"invert(1)"}}></i> {constants.email}
           </span>
           <span>
-            <i className="ri-map-pin-fill"></i> {constants.location}
+            <i className="ri-map-pin-fill" style={{filter:"invert(1)"}}></i> {constants.location}
           </span>
         </div>
 

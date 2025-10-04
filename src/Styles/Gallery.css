@@ -1,0 +1,34 @@
+.gallery-iframe-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 0 15px;
+  width: 100%;
+}
+
+.gallery-iframe {
+  /* border: 1px solid #160303ff; */
+  overflow: hidden;
+  width: 39%;
+  background-color: transparent;
+  transform: scaleX(2);
+  margin: auto;
+  justify-content: center;
+  align-content: center;
+  height: 2200px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Responsive styles for mobiles */
+@media (max-width: 768px) {
+  .gallery-iframe-container {
+    padding: 0 10px;
+  }
+
+  .gallery-iframe {
+    transform: scaleX(1);
+    width: 100%;
+    height: 1500px;
+  }
+}

@@ -1,28 +1,58 @@
 .fixedSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  bottom: 20px;   /* safer than top: 90vh */
+  bottom: 20px;
   right: 20px;
+  overflow-x: hidden;
   z-index: 999;
+  gap: 10px;
 }
-.fixedSection img{
-    width: 60px;
+
+.fixedSection img {
+  width: clamp(40px, 8vw, 60px);
+  height: auto;
+  object-fit: contain;
 }
+
 .top {
-  color: aliceblue;
+  color: #fff;
   background: #980000;
   border: none;
   border-radius: 12px;
-  padding:3px 8px;
-  /* width: 20px; */
+  padding: clamp(2px, 1vw, 6px) clamp(6px, 2vw, 12px);
   cursor: pointer;
-  font-size: 22px;
-  transition: opacity 0.3s ease-in-out;
+  font-size: clamp(16px, 4vw, 22px);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top i {
-  font-size: 28px;
+  font-size: clamp(20px, 5vw, 28px);
+}
+
+/* Hover & Active effects */
+.top:hover {
+  opacity: 0.9;
+  transform: translateY(-3px) scale(1.05);
+}
+.top:active {
+  transform: scale(0.95);
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .fixedSection {
+    position: fixed;
+    bottom: 12px;
+    /* right: 300px; */
+    gap: 8px;
+  }
+  .fixedSection img {
+    width: 45px;
+  }
 }
